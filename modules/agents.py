@@ -1,7 +1,8 @@
 import google.generativeai as genai
+import streamlit as st
 
 genai.configure(
-    api_key="AIzaSyAPxvch9xfIuGiNXPK1vVb59Ck9_zY9vI4"
+    api_key= st.secrets["GEMINI_API_KEY"]
 )
 
 model = genai.GenerativeModel(
